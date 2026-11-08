@@ -1,0 +1,298 @@
+/* ----- RESET & GLOBAL ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #1e1e1e;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ----- W3SCHOOLS INSPIRED LAYOUT (fixed header + sidebar) ----- */
+.header {
+  background-color: #1e1e2f;
+  color: white;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 4px solid #ffb800; /* signature yellow accent */
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  font-size: 28px;
+  color: #ffb800;
+}
+
+.logo-text {
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: -0.5px;
+}
+
+.logo-text span {
+  color: #ffb800;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  border-bottom-color: #ffb800;
+}
+
+/* main container: sidebar + content */
+.container {
+  display: flex;
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+/* ----- SIDEBAR (like W3Schools left menu) ----- */
+.sidebar {
+  width: 260px;
+  background-color: #f1f1f1;
+  padding: 24px 0;
+  border-right: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.sidebar h3 {
+  font-size: 18px;
+  padding: 0 20px 10px 20px;
+  color: #1e1e2f;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 2px 0;
+}
+
+.sidebar li a {
+  display: block;
+  padding: 8px 20px;
+  color: #2d2d2d;
+  text-decoration: none;
+  font-size: 15px;
+  border-left: 4px solid transparent;
+  transition: 0.15s;
+}
+
+.sidebar li a:hover {
+  background-color: #e0e0e0;
+  border-left-color: #ffb800;
+}
+
+.sidebar li a.active {
+  background-color: #e8e8e8;
+  border-left-color: #ffb800;
+  font-weight: 600;
+  color: #000;
+}
+
+/* ----- MAIN CONTENT (tutorial area) ----- */
+.content {
+  flex: 1;
+  padding: 32px 40px;
+  background-color: #ffffff;
+}
+
+.content h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #1e1e2f;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.content h2 {
+  font-size: 26px;
+  margin: 30px 0 15px 0;
+  font-weight: 500;
+  color: #2a2a3a;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+
+.content h3 {
+  font-size: 20px;
+  margin: 25px 0 10px 0;
+  font-weight: 500;
+  color: #3a3a4a;
+}
+
+.content p {
+  margin: 12px 0;
+  font-size: 16px;
+  color: #2e2e3e;
+}
+
+/* code blocks & inline code */
+pre {
+  background-color: #1e1e2f;
+  color: #f8f8f2;
+  padding: 18px 22px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 20px 0;
+  border-left: 5px solid #ffb800;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+code {
+  font-family: 'Consolas', 'Courier New', monospace;
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #1e1e2f;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  color: #f8f8f2;
+}
+
+/* "try it yourself" button like W3Schools */
+.tryit-btn {
+  display: inline-block;
+  background-color: #ffb800;
+  color: #1e1e2f;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin: 10px 0 20px 0;
+  border: none;
+  font-size: 16px;
+  transition: 0.2s;
+  box-shadow: 0 2px 6px rgba(255, 184, 0, 0.3);
+}
+
+.tryit-btn i {
+  margin-right: 8px;
+}
+
+.tryit-btn:hover {
+  background-color: #e6a700;
+  box-shadow: 0 4px 10px rgba(255, 184, 0, 0.4);
+}
+
+/* note / tip boxes */
+.note-box {
+  background-color: #fef9e7;
+  border-left: 6px solid #ffb800;
+  padding: 18px 24px;
+  margin: 25px 0;
+  border-radius: 0 8px 8px 0;
+  font-size: 16px;
+}
+
+.note-box strong {
+  color: #1e1e2f;
+}
+
+/* simple example card */
+.example-card {
+  background-color: #f7f9fc;
+  border: 1px solid #d0d7de;
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin: 20px 0;
+}
+
+.example-card .label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #5a5a6e;
+  font-weight: 600;
+}
+
+/* footer */
+.footer {
+  background-color: #1e1e2f;
+  color: #aaa;
+  text-align: center;
+  padding: 24px;
+  font-size: 14px;
+  border-top: 4px solid #ffb800;
+  margin-top: auto;
+}
+
+.footer a {
+  color: #ffb800;
+  text-decoration: none;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding: 16px 0;
+  }
+  .sidebar h3 {
+    padding-left: 16px;
+  }
+  .content {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .nav-links {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
