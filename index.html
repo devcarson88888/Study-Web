@@ -3,36 +3,206 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study-Web</title>
+  <title>StudyHub · home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header class="sketch-header">
-    <div class="logo-text">study-web</div>
+  <!-- HEADER -->
+  <header class="top-bar">
+    <div class="logo-area">
+      <i class="fas fa-graduation-cap"></i>
+      <span class="logo-text">StudyHub</span>
+    </div>
+    <nav class="main-nav">
+      <a href="#" class="active">Home</a>
+      <a href="#">Courses</a>
+      <a href="#">Exercises</a>
+      <a href="#">Quizzes</a>
+      <a href="#">Progress</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="search"><i class="fas fa-search"></i></button>
+      <button class="icon-btn" aria-label="notifications"><i class="far fa-bell"></i><span class="badge">3</span></button>
+      <div class="avatar"><i class="fas fa-user-circle"></i></div>
+    </div>
   </header>
 
-  <main class="sketch-main">
-    <div class="sketch-grid">
-      
-      <a href="python/index.html" class="sketch-card card-py">
-        <span class="sketch-text">Py</span>
-      </a>
+  <!-- LAYOUT -->
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3><i class="fas fa-book-open"></i> Learning</h3>
+        <ul>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> My courses</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Flashcards</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Practice tests</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Study planner</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <h3><i class="fas fa-chart-simple"></i> Analytics</h3>
+        <ul>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Weekly report</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Streak details</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Mastery level</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <h3><i class="fas fa-gear"></i> Settings</h3>
+        <ul>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Preferences</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Account</a></li>
+        </ul>
+      </div>
+    </aside>
 
-      <a href="#" class="sketch-card card-html">
-        <span class="sketch-text">Html</span>
-      </a>
+    <!-- MAIN CONTENT -->
+    <main class="content">
+      <!-- HERO -->
+      <section class="hero-banner">
+        <div class="hero-text">
+          <h1>Welcome back, <span class="highlight">Alex</span> 👋</h1>
+          <p>You have <strong>3 tasks</strong> and <strong>2 decks</strong> to review. Keep the momentum going!</p>
+          <div class="hero-buttons">
+            <button class="btn-primary" id="startBtn"><i class="fas fa-play"></i> Start studying</button>
+            <button class="btn-secondary" id="newSessionBtn"><i class="fas fa-plus"></i> New session</button>
+          </div>
+        </div>
+        <div class="hero-icon">
+          <i class="fas fa-brain"></i>
+          <i class="fas fa-book"></i>
+        </div>
+      </section>
 
-      <a href="#" class="sketch-card card-css">
-        <span class="sketch-text">CSS</span>
-      </a>
+      <!-- STATS -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <i class="fas fa-clock"></i>
+          <div>
+            <span class="stat-value" data-target="4.2">0</span>
+            <span class="stat-label">Hours this week</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-fire"></i>
+          <div>
+            <span class="stat-value" data-target="12">0</span>
+            <span class="stat-label">Day streak</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-check-circle"></i>
+          <div>
+            <span class="stat-value" data-target="87">0</span>
+            <span class="stat-label">Completion %</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-layer-group"></i>
+          <div>
+            <span class="stat-value" data-target="214">0</span>
+            <span class="stat-label">Cards reviewed</span>
+          </div>
+        </div>
+      </div>
 
-      <a href="#" class="sketch-card card-js">
-        <span class="sketch-text">JS</span>
-      </a>
+      <!-- TWO COLUMN -->
+      <div class="two-col">
+        <section class="panel">
+          <div class="panel-header">
+            <h2><i class="fas fa-history"></i> Recent activity</h2>
+            <a href="#" class="see-all">view all →</a>
+          </div>
+          <ul class="activity-list">
+            <li>
+              <i class="fas fa-layer-group activity-icon"></i>
+              <div class="activity-info">
+                <p><strong>Biology 101</strong> — flashcards</p>
+                <span class="time">2 hours ago</span>
+              </div>
+              <span class="tag">+12 cards</span>
+            </li>
+            <li>
+              <i class="fas fa-book activity-icon"></i>
+              <div class="activity-info">
+                <p><strong>Algebra quiz</strong> — practice test</p>
+                <span class="time">Yesterday</span>
+              </div>
+              <span class="tag">92%</span>
+            </li>
+            <li>
+              <i class="fas fa-pen activity-icon"></i>
+              <div class="activity-info">
+                <p><strong>History essay</strong> — draft due</p>
+                <span class="time">2 days ago</span>
+              </div>
+              <span class="tag">submitted</span>
+            </li>
+          </ul>
+        </section>
 
+        <section class="panel">
+          <div class="panel-header">
+            <h2><i class="fas fa-list-check"></i> Today's tasks</h2>
+            <a href="#" class="see-all">add task →</a>
+          </div>
+          <ul class="task-list">
+            <li>
+              <input type="checkbox" id="task1" class="task-check" checked>
+              <label for="task1">
+                <span class="task-title">Review Spanish vocabulary</span>
+                <span class="task-meta"><i class="far fa-clock"></i> 15 min</span>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" id="task2" class="task-check">
+              <label for="task2">
+                <span class="task-title">Finish physics problem set</span>
+                <span class="task-meta"><i class="far fa-clock"></i> 45 min</span>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" id="task3" class="task-check">
+              <label for="task3">
+                <span class="task-title">Read chapter 7 – Biology</span>
+                <span class="task-meta"><i class="far fa-clock"></i> 30 min</span>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" id="task4" class="task-check">
+              <label for="task4">
+                <span class="task-title">Group project meeting</span>
+                <span class="task-meta"><i class="fas fa-video"></i> 2:00 PM</span>
+              </label>
+            </li>
+          </ul>
+          <div class="task-progress">
+            <span id="progressLabel">1 of 4 completed</span>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width: 25%"></div></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- NOTE -->
+      <div class="note">
+        <i class="fas fa-lightbulb"></i>
+        <p><strong>Study tip:</strong> Small daily improvements are the key to staggering long-term results.</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
     </div>
-  </main>
+    <p>© 2025 StudyHub — focus, learn, repeat.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
