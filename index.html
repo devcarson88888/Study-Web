@@ -9,67 +9,39 @@
 </head>
 <body>
 
-  <header class="header">
-    <div class="logo-area">
-      <i class="fas fa-code logo-icon"></i>
-      <div class="logo-text">Study<span>Web</span></div>
-    </div>
-    <div class="nav-links">
-      <a href="python/index.html">Python</a>
-      <a href="#">HTML</a>
-      <a href="#">CSS</a>
-      <a href="#">JavaScript</a>
-      <a href="#">SQL</a>
-    </div>
+  <!-- Header matching the sketch -->
+  <header class="sketch-header">
+    <div class="logo-text">study-web</div>
   </header>
 
-  <main class="landing">
-    <section class="hero">
-      <h1>Learn to Code, <span>The Easy Way</span></h1>
-      <p>Free, structured tutorials inspired by W3Schools. Start with Python.</p>
-    </section>
+  <!-- Main content area matching the sketch layout -->
+  <main class="sketch-main">
+    <div class="sketch-grid">
+      
+      <!-- Py Card -->
+      <a href="python/index.html" class="sketch-card card-py">
+        <span class="sketch-text">Py</span>
+      </a>
 
-    <section class="courses">
-      <h2>Available Courses</h2>
-      <div class="course-grid">
+      <!-- Html Card -->
+      <a href="#" class="sketch-card card-html">
+        <span class="sketch-text">Html</span>
+      </a>
 
-        <a href="python/index.html" class="course-card">
-          <i class="fab fa-python course-icon" style="color:#3776AB"></i>
-          <h3>Python</h3>
-          <p>Beginner-friendly. Learn syntax, data types, loops, functions and more.</p>
-          <span class="course-btn">Start Learning →</span>
-        </a>
+      <!-- CSS Card -->
+      <a href="#" class="sketch-card card-css">
+        <span class="sketch-text">CSS</span>
+      </a>
 
-        <div class="course-card disabled">
-          <i class="fab fa-html5 course-icon" style="color:#e34f26"></i>
-          <h3>HTML</h3>
-          <p>Coming soon — structure the web.</p>
-          <span class="course-btn">Coming Soon</span>
-        </div>
+      <!-- JS Card -->
+      <a href="#" class="sketch-card card-js">
+        <span class="sketch-text">JS</span>
+      </a>
 
-        <div class="course-card disabled">
-          <i class="fab fa-css3-alt course-icon" style="color:#264de4"></i>
-          <h3>CSS</h3>
-          <p>Coming soon — style the web.</p>
-          <span class="course-btn">Coming Soon</span>
-        </div>
-
-        <div class="course-card disabled">
-          <i class="fab fa-js course-icon" style="color:#f7df1e"></i>
-          <h3>JavaScript</h3>
-          <p>Coming soon — make it interactive.</p>
-          <span class="course-btn">Coming Soon</span>
-        </div>
-
-      </div>
-    </section>
+    </div>
   </main>
 
-  <footer class="footer">
-    <p>Study-Web · Built for learning. <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-    <p style="margin-top: 10px; font-size: 13px;">© 2025 Study-Web. All rights reserved.</p>
-  </footer>
-
+  <!-- Python tutorial link at the bottom or just rely on the Py card -->
   <script src="script.js"></script>
 </body>
 </html>
