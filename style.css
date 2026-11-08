@@ -1,21 +1,16 @@
-/* ----- RESET & GLOBAL ----- */
+/* Reset & Global */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: 'Segoe UI', Roboto, Arial, sans-serif;
   background-color: #fcfcfc;
   color: #1e1e1e;
-  line-height: 1.5;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* =========================================
-   LANDING PAGE STYLES (Based on Sketch)
-   ========================================= */
-
-/* Sketch Header with squiggly line */
+/* Header */
 .sketch-header {
   padding: 20px 40px;
   border-bottom: 2px dashed #333;
@@ -23,35 +18,31 @@ body {
 }
 
 .sketch-header .logo-text {
-  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
   font-size: 24px;
-  font-weight: normal;
   color: #222;
   letter-spacing: 2px;
 }
 
-/* Main grid layout matching sketch */
+/* Main Grid */
 .sketch-main {
   flex: 1;
   max-width: 1000px;
   margin: 0 auto;
   width: 100%;
   padding: 20px;
-  position: relative;
 }
 
 .sketch-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
   gap: 40px;
   max-width: 800px;
   margin: 0 auto;
-  /* Adjust positioning to match sketch layout */
   padding-top: 20px;
 }
 
-/* Base Sketch Card Style */
+/* Cards */
 .sketch-card {
   display: flex;
   align-items: center;
@@ -59,23 +50,21 @@ body {
   text-decoration: none;
   background: #fff;
   border: 2px solid #333;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s;
   cursor: pointer;
 }
 
 .sketch-card:hover {
-  transform: scale(1.05) !important;
-  box-shadow: 4px 4px 0 #ccc;
   background: #f9f9f9;
 }
 
 .sketch-text {
-  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
   font-size: 40px;
   color: #333;
 }
 
-/* Individual Card Shapes & Placement based on sketch */
+/* Individual Shapes & Layout */
 .card-py {
   width: 140px;
   height: 120px;
@@ -114,7 +103,6 @@ body {
   grid-row: 2;
 }
 
-/* Responsive for Sketch Grid */
 @media (max-width: 768px) {
   .sketch-grid {
     display: flex;
@@ -127,48 +115,4 @@ body {
     transform: rotate(0);
     justify-self: auto;
   }
-}
-
-/* =========================================
-   PYTHON TUTORIAL STYLES (W3Schools style)
-   ========================================= */
-
-.header {
-  background-color: #1e1e2f;
-  color: white;
-  padding: 12px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  border-bottom: 4px solid #ffb800;
-}
-
-.logo-area { display: flex; align-items: center; gap: 12px; }
-.logo-link { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.logo-icon { font-size: 28px; color: #ffb800; }
-.logo-text-main { font-weight: 600; font-size: 24px; letter-spacing: -0.5px; color: white; }
-.logo-text-main span { color: #ffb800; font-weight: 700; }
-
-.nav-links { display: flex; gap: 24px; font-weight: 500; font-size: 16px; }
-.nav-links a {
-  color: white; text-decoration: none; padding: 6px 0;
-  border-bottom: 2px solid transparent; transition: 0.2s;
-}
-.nav-links a:hover { border-bottom-color: #ffb800; }
-
-.footer {
-  background-color: #1e1e2f;
-  color: #aaa;
-  text-align: center;
-  padding: 24px;
-  font-size: 14px;
-  border-top: 4px solid #ffb800;
-  margin-top: auto;
-}
-.footer a { color: #ffb800; text-decoration: none; }
-
-@media (max-width: 600px) {
-  .header { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .nav-links { gap: 16px; flex-wrap: wrap; }
 }
