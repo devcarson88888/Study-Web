@@ -3,170 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Python · Study-Web (W3Schools style)</title>
-  <!-- Font Awesome for icons -->
+  <title>Study-Web · Learn to Code</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="header">
     <div class="logo-area">
-      <i class="fab fa-python logo-icon"></i>
+      <i class="fas fa-code logo-icon"></i>
       <div class="logo-text">Study<span>Web</span></div>
     </div>
     <div class="nav-links">
+      <a href="python/index.html">Python</a>
       <a href="#">HTML</a>
       <a href="#">CSS</a>
       <a href="#">JavaScript</a>
-      <a href="#" style="color:#ffb800; border-bottom-color:#ffb800;">Python</a>
       <a href="#">SQL</a>
     </div>
   </header>
 
-  <!-- MAIN CONTAINER: SIDEBAR + CONTENT -->
-  <div class="container">
-    <!-- SIDEBAR (Python menu) -->
-    <aside class="sidebar">
-      <h3>Python Tutorial</h3>
-      <ul>
-        <li><a href="#" class="active">Python HOME</a></li>
-        <li><a href="#">Python Intro</a></li>
-        <li><a href="#">Python Get Started</a></li>
-        <li><a href="#">Python Syntax</a></li>
-        <li><a href="#">Python Comments</a></li>
-        <li><a href="#">Python Variables</a></li>
-        <li><a href="#">Python Data Types</a></li>
-        <li><a href="#">Python Numbers</a></li>
-        <li><a href="#">Python Casting</a></li>
-        <li><a href="#">Python Strings</a></li>
-        <li><a href="#">Python Booleans</a></li>
-        <li><a href="#">Python Operators</a></li>
-        <li><a href="#">Python Lists</a></li>
-        <li><a href="#">Python Tuples</a></li>
-        <li><a href="#">Python Sets</a></li>
-        <li><a href="#">Python Dictionaries</a></li>
-        <li><a href="#">Python If...Else</a></li>
-        <li><a href="#">Python While Loops</a></li>
-        <li><a href="#">Python For Loops</a></li>
-        <li><a href="#">Python Functions</a></li>
-        <li><a href="#">Python Lambda</a></li>
-        <li><a href="#">Python Classes</a></li>
-      </ul>
-    </aside>
+  <main class="landing">
+    <section class="hero">
+      <h1>Learn to Code, <span>The Easy Way</span></h1>
+      <p>Free, structured tutorials inspired by W3Schools. Start with Python.</p>
+    </section>
 
-    <!-- MAIN CONTENT -->
-    <main class="content">
-      <h1>Python Tutorial</h1>
-      <p style="font-size: 18px; color: #444;">Learn Python — the most popular programming language.</p>
-      
-      <div class="note-box">
-        <strong>💡 Did you know?</strong> Python is an interpreted, high-level, general-purpose programming language. 
-        It’s used for web development, data analysis, artificial intelligence, and more.
+    <section class="courses">
+      <h2>Available Courses</h2>
+      <div class="course-grid">
+
+        <a href="python/index.html" class="course-card">
+          <i class="fab fa-python course-icon" style="color:#3776AB"></i>
+          <h3>Python</h3>
+          <p>Beginner-friendly. Learn syntax, data types, loops, functions and more.</p>
+          <span class="course-btn">Start Learning →</span>
+        </a>
+
+        <div class="course-card disabled">
+          <i class="fab fa-html5 course-icon" style="color:#e34f26"></i>
+          <h3>HTML</h3>
+          <p>Coming soon — structure the web.</p>
+          <span class="course-btn">Coming Soon</span>
+        </div>
+
+        <div class="course-card disabled">
+          <i class="fab fa-css3-alt course-icon" style="color:#264de4"></i>
+          <h3>CSS</h3>
+          <p>Coming soon — style the web.</p>
+          <span class="course-btn">Coming Soon</span>
+        </div>
+
+        <div class="course-card disabled">
+          <i class="fab fa-js course-icon" style="color:#f7df1e"></i>
+          <h3>JavaScript</h3>
+          <p>Coming soon — make it interactive.</p>
+          <span class="course-btn">Coming Soon</span>
+        </div>
+
       </div>
+    </section>
+  </main>
 
-      <h2>Python Introduction</h2>
-      <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
-      <p>It is used for:</p>
-      <ul style="margin: 10px 0 20px 30px; color: #2e2e3e;">
-        <li>web development (server-side),</li>
-        <li>software development,</li>
-        <li>mathematics,</li>
-        <li>system scripting.</li>
-      </ul>
-
-      <h2>What can Python do?</h2>
-      <ul style="margin: 10px 0 20px 30px; color: #2e2e3e;">
-        <li>Python can be used on a server to create web applications.</li>
-        <li>Python can be used alongside software to create workflows.</li>
-        <li>Python can connect to database systems. It can also read and modify files.</li>
-        <li>Python can be used to handle big data and perform complex mathematics.</li>
-        <li>Python can be used for rapid prototyping, or for production-ready software development.</li>
-      </ul>
-
-      <h2>Python Syntax compared to other languages</h2>
-      <p>Python was designed for readability, and has some similarities to the English language with influence from mathematics.</p>
-      <p>Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses.</p>
-      <p>Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.</p>
-
-      <h2>Python Example</h2>
-      <pre><code>print("Hello, World!")</code></pre>
-      <a href="#" class="tryit-btn"><i class="fas fa-play"></i> Try it Yourself »</a>
-
-      <h2>Python Syntax</h2>
-      <p>As we learned in the previous page, Python syntax can be executed by writing directly in the Command Line:</p>
-      <pre><code>&gt;&gt;&gt; print("Hello, World!")
-Hello, World!</code></pre>
-      <p>Or by creating a python file on the server, using the .py file extension, and running it in the Command Line:</p>
-      <pre><code>C:\Users\Your Name&gt;python myfile.py</code></pre>
-
-      <h3>Python Indentation</h3>
-      <p>Indentation refers to the spaces at the beginning of a code line.</p>
-      <p>Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.</p>
-      <p>Python uses indentation to indicate a block of code.</p>
-      <pre><code>if 5 &gt; 2:
-    print("Five is greater than two!")</code></pre>
-      <div class="note-box">
-        <strong>⚠️ Important:</strong> Python will give you an error if you skip the indentation.
-      </div>
-
-      <h2>Python Comments</h2>
-      <p>Comments can be used to explain Python code.</p>
-      <p>Comments can be used to make the code more readable.</p>
-      <p>Comments can be used to prevent execution when testing code.</p>
-      <pre><code># This is a comment
-print("Hello, World!")</code></pre>
-
-      <h2>Python Variables</h2>
-      <p>Variables are containers for storing data values.</p>
-      <pre><code>x = 5
-y = "John"
-print(x)
-print(y)</code></pre>
-      <a href="#" class="tryit-btn"><i class="fas fa-play"></i> Try it Yourself »</a>
-
-      <h2>Python Data Types</h2>
-      <p>In programming, data type is an important concept.</p>
-      <p>Python has the following data types built-in by default:</p>
-      <div class="example-card">
-        <div class="label">Text Type:</div> <code>str</code><br>
-        <div class="label" style="margin-top:8px;">Numeric Types:</div> <code>int</code>, <code>float</code>, <code>complex</code><br>
-        <div class="label" style="margin-top:8px;">Sequence Types:</div> <code>list</code>, <code>tuple</code>, <code>range</code><br>
-        <div class="label" style="margin-top:8px;">Mapping Type:</div> <code>dict</code><br>
-        <div class="label" style="margin-top:8px;">Set Types:</div> <code>set</code>, <code>frozenset</code><br>
-        <div class="label" style="margin-top:8px;">Boolean Type:</div> <code>bool</code><br>
-        <div class="label" style="margin-top:8px;">Binary Types:</div> <code>bytes</code>, <code>bytearray</code>, <code>memoryview</code>
-      </div>
-
-      <h2>Python Operators</h2>
-      <p>Operators are used to perform operations on variables and values.</p>
-      <pre><code>print(10 + 5)   # Output: 15</code></pre>
-      <p>Python divides the operators in the following groups:</p>
-      <ul style="margin: 10px 0 20px 30px;">
-        <li>Arithmetic operators</li>
-        <li>Assignment operators</li>
-        <li>Comparison operators</li>
-        <li>Logical operators</li>
-        <li>Identity operators</li>
-        <li>Membership operators</li>
-        <li>Bitwise operators</li>
-      </ul>
-
-      <div style="margin: 40px 0 20px; border-top: 1px solid #eee; padding-top: 20px;">
-        <p style="font-style: italic; color: #666;">✨ This is a study-web demo inspired by W3Schools. Continue exploring Python with the sidebar links (demo only).</p>
-      </div>
-    </main>
-  </div>
-
-  <!-- FOOTER -->
   <footer class="footer">
-    <p>Study-Web · Python Tutorial · Built for learning. <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-    <p style="margin-top: 10px; font-size: 13px;">© 2025 Study-Web. All rights reserved. (W3Schools style clone for educational purposes)</p>
+    <p>Study-Web · Built for learning. <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    <p style="margin-top: 10px; font-size: 13px;">© 2025 Study-Web. All rights reserved.</p>
   </footer>
 
-  <!-- External JS -->
   <script src="script.js"></script>
 </body>
 </html>
