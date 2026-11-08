@@ -3,7 +3,7 @@
 
 body {
   font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-  background-color: #f9f9f9;
+  background-color: #fcfcfc;
   color: #1e1e1e;
   line-height: 1.5;
   display: flex;
@@ -11,7 +11,128 @@ body {
   min-height: 100vh;
 }
 
-/* ----- HEADER ----- */
+/* =========================================
+   LANDING PAGE STYLES (Based on Sketch)
+   ========================================= */
+
+/* Sketch Header with squiggly line */
+.sketch-header {
+  padding: 20px 40px;
+  border-bottom: 2px dashed #333;
+  margin-bottom: 40px;
+}
+
+.sketch-header .logo-text {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
+  font-size: 24px;
+  font-weight: normal;
+  color: #222;
+  letter-spacing: 2px;
+}
+
+/* Main grid layout matching sketch */
+.sketch-main {
+  flex: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+}
+
+.sketch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  /* Adjust positioning to match sketch layout */
+  padding-top: 20px;
+}
+
+/* Base Sketch Card Style */
+.sketch-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: #fff;
+  border: 2px solid #333;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.sketch-card:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 4px 4px 0 #ccc;
+  background: #f9f9f9;
+}
+
+.sketch-text {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
+  font-size: 40px;
+  color: #333;
+}
+
+/* Individual Card Shapes & Placement based on sketch */
+.card-py {
+  width: 140px;
+  height: 120px;
+  border-radius: 20px 40px 25px 35px;
+  transform: rotate(-6deg);
+  justify-self: start;
+  margin-left: 20px;
+}
+
+.card-html {
+  width: 160px;
+  height: 180px;
+  border-radius: 40% 45% 50% 40% / 45% 50% 40% 50%;
+  transform: rotate(2deg);
+  justify-self: center;
+  margin-top: -20px;
+}
+
+.card-css {
+  width: 180px;
+  height: 130px;
+  border-radius: 50% 60% 40% 50% / 60% 40% 60% 40%;
+  transform: rotate(4deg);
+  justify-self: end;
+  margin-top: 20px;
+}
+
+.card-js {
+  width: 130px;
+  height: 130px;
+  border-radius: 45% 40% 55% 35% / 50% 45% 55% 50%;
+  transform: rotate(-8deg);
+  justify-self: start;
+  margin-left: 60px;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Responsive for Sketch Grid */
+@media (max-width: 768px) {
+  .sketch-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .card-py, .card-html, .card-css, .card-js {
+    margin: 0;
+    transform: rotate(0);
+    justify-self: auto;
+  }
+}
+
+/* =========================================
+   PYTHON TUTORIAL STYLES (W3Schools style)
+   ========================================= */
+
 .header {
   background-color: #1e1e2f;
   color: white;
@@ -26,8 +147,8 @@ body {
 .logo-area { display: flex; align-items: center; gap: 12px; }
 .logo-link { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .logo-icon { font-size: 28px; color: #ffb800; }
-.logo-text { font-weight: 600; font-size: 24px; letter-spacing: -0.5px; color: white; }
-.logo-text span { color: #ffb800; font-weight: 700; }
+.logo-text-main { font-weight: 600; font-size: 24px; letter-spacing: -0.5px; color: white; }
+.logo-text-main span { color: #ffb800; font-weight: 700; }
 
 .nav-links { display: flex; gap: 24px; font-weight: 500; font-size: 16px; }
 .nav-links a {
@@ -36,57 +157,6 @@ body {
 }
 .nav-links a:hover { border-bottom-color: #ffb800; }
 
-/* ----- LANDING PAGE ----- */
-.landing { flex: 1; max-width: 1200px; margin: 0 auto; padding: 40px 24px; width: 100%; }
-
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #1e1e2f 0%, #2d2d4a 100%);
-  border-radius: 16px;
-  color: white;
-  margin-bottom: 50px;
-}
-.hero h1 { font-size: 42px; font-weight: 700; margin-bottom: 16px; }
-.hero h1 span { color: #ffb800; }
-.hero p { font-size: 18px; opacity: 0.9; }
-
-.courses h2 { font-size: 28px; margin-bottom: 24px; color: #1e1e2f; }
-
-.course-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 24px;
-}
-
-.course-card {
-  display: flex;
-  flex-direction: column;
-  background: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 28px 24px;
-  text-decoration: none;
-  color: inherit;
-  transition: 0.25s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-.course-card:hover:not(.disabled) {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  border-color: #ffb800;
-}
-.course-card.disabled { opacity: 0.55; cursor: not-allowed; }
-
-.course-icon { font-size: 40px; margin-bottom: 14px; }
-.course-card h3 { font-size: 22px; margin-bottom: 8px; color: #1e1e2f; }
-.course-card p { font-size: 15px; color: #555; flex: 1; margin-bottom: 16px; }
-.course-btn {
-  font-weight: 600; color: #1e1e2f; font-size: 15px;
-  padding-top: 12px; border-top: 1px solid #eee;
-}
-
-/* ----- FOOTER ----- */
 .footer {
   background-color: #1e1e2f;
   color: #aaa;
@@ -98,9 +168,7 @@ body {
 }
 .footer a { color: #ffb800; text-decoration: none; }
 
-/* ----- RESPONSIVE ----- */
 @media (max-width: 600px) {
   .header { flex-direction: column; align-items: flex-start; gap: 12px; }
   .nav-links { gap: 16px; flex-wrap: wrap; }
-  .hero h1 { font-size: 30px; }
 }
